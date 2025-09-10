@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy 4 Months Anniversary Pilluu ❤️</title>
+<title>Happy Four Month Anniversary Pilluu ❤️</title>
 <style>
   body {
     margin: 0;
@@ -16,18 +16,12 @@
     overflow: hidden;
     color: #fff5f5;
   }
-
-  .container {
-    text-align: center;
-    z-index: 2;
-  }
-
+  .container { text-align: center; }
   h1 {
     font-size: 2.2em;
     color: #ff99aa;
     text-shadow: 0 0 15px #ff3366;
   }
-
   .btn {
     background: linear-gradient(45deg, #ff4d6d, #ff80ab);
     border: none;
@@ -39,23 +33,16 @@
     margin-top: 20px;
     transition: all 0.3s ease;
   }
-  .btn:hover {
-    background: linear-gradient(45deg, #e91e63, #ff4081);
-    transform: scale(1.05);
-  }
-
-  /* Surprise section */
+  .btn:hover { transform: scale(1.05); }
   .surprise {
     display: none;
     margin-top: 30px;
     animation: fadeIn 1.5s forwards;
   }
-
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
   /* Cake */
   .cake {
     background: #e91e63;
@@ -66,7 +53,6 @@
     position: relative;
     box-shadow: 0 8px 25px rgba(0,0,0,0.4);
   }
-
   .cake::before {
     content: "Happy 4 Months Anniversary, My Pilluu";
     position: absolute;
@@ -78,9 +64,7 @@
     color: #fffbe7;
     text-align: center;
     width: 180px;
-    line-height: 1.3em;
   }
-
   /* Candles */
   .candle {
     width: 15px;
@@ -105,8 +89,7 @@
   }
   .candle1 { left: -80px; top: 20px; }
   .candle2 { left: 260px; top: 20px; }
-
-  /* Flaming Heart */
+  /* Heart */
   .heart {
     font-size: 100px;
     color: red;
@@ -118,7 +101,6 @@
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.3); }
   }
-
   /* Crackers */
   .spark {
     position: fixed;
@@ -132,7 +114,6 @@
     from { transform: scale(1) translateY(0); opacity: 1; }
     to { transform: scale(0) translateY(-100px); opacity: 0; }
   }
-
   /* Message */
   .message {
     margin-top: 20px;
@@ -142,63 +123,38 @@
     text-shadow: 0 0 10px #ff88a0;
     line-height: 1.6;
   }
-
-  .signature {
-    margin-top: 15px;
-    font-size: 20px;
-    color: #ff99aa;
-    font-weight: bold;
-  }
-
-  /* Couple Image */
-  .couple {
-    margin-top: 30px;
-    width: 250px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(255,100,150,0.5);
-  }
 </style>
 </head>
 <body>
-  <!-- Background Music -->
-  <audio id="bgMusic" autoplay loop>
-    <source src="https://cdn.pixabay.com/download/audio/2023/04/04/audio_2ef9c1c7f0.mp3?filename=romantic-piano-14365.mp3" type="audio/mpeg">
-  </audio>
 
-  <div class="container">
-    <h1>Happy 4 Months Anniversary Pilluu ❤️</h1>
-    <button class="btn" onclick="showSurprise()">Click Here for Surprise 💌</button>
+<!-- Titanic tune background music -->
+<audio id="bgMusic" autoplay loop>
+  <source src="https://files.catbox.moe/v8s9ez.mp3" type="audio/mpeg">
+</audio>
 
-    <div class="surprise" id="surpriseSection">
-      <div class="cake">
-        <div class="candle candle1"><div class="flame"></div></div>
-        <div class="candle candle2"><div class="flame"></div></div>
-      </div>
+<div class="container">
+  <h1>Happy 4 Months Anniversary Pilluu ❤️</h1>
+  <button class="btn" onclick="showSurprise()">Click Here for Surprise 💌</button>
 
-      <div class="heart">❤️</div>
-
-      <div class="message">
-        My sweetest Pilluu, <br><br>
-        In these four months, I have found not just love, but a world of happiness in you.  
-        Every heartbeat whispers your name, and every moment with you is a blessing.  
-        I promise to cherish you, support you, and love you endlessly. 💖  
-      </div>
-
-      <div class="signature">
-        Forever yours,<br>Kundan ❤️ Gayuu
-      </div>
-
-      <!-- Couple proposal image (replace link with yours if you want) -->
-      <img src="https://cdn.pixabay.com/photo/2020/02/14/14/14/couple-4842547_960_720.jpg" 
-           alt="Couple Proposal" class="couple">
+  <div class="surprise" id="surpriseSection">
+    <div class="cake">
+      <div class="candle candle1"><div class="flame"></div></div>
+      <div class="candle candle2"><div class="flame"></div></div>
+    </div>
+    <div class="heart">❤️</div>
+    <div class="message">
+      My dearest Pilluu,<br><br>
+      These four months have been the most beautiful journey of my life.  
+      You are my heart, my happiness, and my forever.  
+      I promise to hold your hand through every moment and love you endlessly. 💖  
     </div>
   </div>
+</div>
 
 <script>
   function showSurprise() {
     document.getElementById("surpriseSection").style.display = "block";
-
-    // Create cracker sparks
+    // Sparkling crackers
     for (let i = 0; i < 50; i++) {
       let spark = document.createElement("div");
       spark.className = "spark";
