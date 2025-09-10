@@ -3,17 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy 4th Month Anniversary, Pilluu ❤️</title>
+<title>Happy 4 Months Anniversary ❤️</title>
 <style>
   body {
     margin: 0;
     font-family: "Georgia", serif;
-    background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+    background: radial-gradient(circle at top, #3b1c1c, #1c0f0f);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     overflow: hidden;
+    color: #fff5f5;
+  }
+
+  .container {
+    text-align: center;
+    position: relative;
+    padding: 40px;
+    z-index: 2;
+  }
+
+  /* Cake */
+  .cake {
+    background: #e91e63;
+    width: 220px;
+    height: 180px;
+    border-radius: 50% 50% 40% 40%;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  }
+
+  .cake::before {
+    content: "Happy 4 Months Anniversary, My Pilluu";
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Brush Script MT", cursive;
+    font-size: 20px;
+    color: #fffbe7;
+    text-align: center;
+    width: 180px;
+    line-height: 1.3em;
+  }
+
+  /* Candles */
+  .candle {
+    width: 15px;
+    height: 50px;
+    background: #fff5d6;
+    border-radius: 5px;
+    position: absolute;
+  }
+
+  .flame {
+    width: 10px;
+    height: 20px;
+    background: radial-gradient(circle, #ffdd55, #ff8800);
+    border-radius: 50%;
+    position: absolute;
+    top: -18px;
+    left: 2px;
+    animation: flicker 0.8s infinite;
+  }
+
+  @keyframes flicker {
+    0%, 100% { transform: scaleY(1) scaleX(1); opacity: 1; }
+    50% { transform: scaleY(1.2) scaleX(0.9); opacity: 0.8; }
+  }
+
+  /* Candle positions */
+  .candle1 { left: -80px; top: 20px; }
+  .candle2 { left: 260px; top: 20px; }
+  .candle3 { left: -50px; top: 150px; }
+  .candle4 { left: 230px; top: 150px; }
+
+  /* Message */
+  .message {
+    margin-top: 50px;
+    font-size: 20px;
+    font-style: italic;
+    color: #ffd6e7;
+    text-shadow: 0 0 10px #ff88a0;
+  }
+
+  .signature {
+    margin-top: 15px;
+    font-size: 22px;
+    color: #ff99aa;
+    font-weight: bold;
   }
 
   /* Falling petals */
@@ -24,97 +104,12 @@
     color: #e91e63;
     animation: fall linear infinite;
     opacity: 0.9;
+    z-index: 1;
   }
 
   @keyframes fall {
     0% { transform: translateY(0) rotate(0deg); }
     100% { transform: translateY(110vh) rotate(360deg); }
-  }
-
-  .container {
-    background: rgba(255, 255, 255, 0.92);
-    padding: 40px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
-    max-width: 700px;
-    position: relative;
-    z-index: 2;
-  }
-
-  h1 {
-    font-size: 2.2em;
-    color: #c2185b;
-    margin-bottom: 15px;
-  }
-
-  h2 {
-    font-size: 1.3em;
-    color: #7b1fa2;
-    margin-bottom: 20px;
-  }
-
-  .heart {
-    font-size: 70px;
-    color: red;
-    animation: beat 1s infinite;
-    margin: 20px 0;
-  }
-
-  @keyframes beat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.3); }
-  }
-
-  .btn {
-    background: linear-gradient(45deg, #ff4d6d, #ff80ab);
-    border: none;
-    color: white;
-    padding: 12px 24px;
-    font-size: 1em;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: all 0.3s ease;
-  }
-
-  .btn:hover {
-    background: linear-gradient(45deg, #e91e63, #ff4081);
-    transform: scale(1.05);
-  }
-
-  .message {
-    margin-top: 25px;
-    padding: 20px;
-    background: #fff0f5;
-    border-radius: 15px;
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #444;
-    display: none;
-    animation: fadeIn 1.5s forwards;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .signature {
-    margin-top: 20px;
-    font-style: italic;
-    font-size: 1.2em;
-    color: #c2185b;
-  }
-
-  .roses {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    font-size: 30px;
-    opacity: 0.8;
   }
 </style>
 </head>
@@ -122,36 +117,23 @@
   <!-- Falling petals layer -->
   <div id="petals"></div>
 
-  <!-- Background music -->
-  <audio id="bgMusic" autoplay loop>
-    <source src="https://cdn.pixabay.com/download/audio/2023/04/04/audio_2ef9c1c7f0.mp3?filename=romantic-piano-14365.mp3" type="audio/mpeg">
-  </audio>
-
   <div class="container">
-    <h1>Happy 4th Month Anniversary ❤️</h1>
-    <h2>To My Sweet Pilluu</h2>
-    <div class="heart">❤️</div>
-
-    <button class="btn" onclick="showMessage()">Click to Reveal Surprise 💌</button>
-
-    <div class="message" id="hiddenMessage">
-      Four months may seem small, but to me, it means the world. <br><br>
-      Every single day with you has been a blessing, a memory, and a promise of forever.  
-      You are my joy, my peace, and my endless love. 💕 <br><br>
-      <div class="signature">
-        Forever yours,<br>
-        Kundan ❤️ Gayuu
-      </div>
+    <div class="cake">
+      <!-- Candles -->
+      <div class="candle candle1"><div class="flame"></div></div>
+      <div class="candle candle2"><div class="flame"></div></div>
+      <div class="candle candle3"><div class="flame"></div></div>
+      <div class="candle candle4"><div class="flame"></div></div>
     </div>
-
-    <div class="roses">🌹 🌹 🌹 🌹 🌹</div>
+    <div class="message">
+      Even after 4 months, my love for you only grows stronger.
+    </div>
+    <div class="signature">
+      Forever yours, Kundan ❤️ Gayuu
+    </div>
   </div>
 
 <script>
-  function showMessage() {
-    document.getElementById("hiddenMessage").style.display = "block";
-  }
-
   // Create falling petals
   const petalsContainer = document.getElementById("petals");
   for (let i = 0; i < 25; i++) {
