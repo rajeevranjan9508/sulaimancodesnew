@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy 4 Months Anniversary ❤️</title>
+<title>Happy 4 Months Anniversary Pilluu ❤️</title>
 <style>
   body {
     margin: 0;
     font-family: "Georgia", serif;
-    background: radial-gradient(circle at top, #3b1c1c, #1c0f0f);
+    background: radial-gradient(circle at top, #2b0b0b, #000);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -19,9 +19,41 @@
 
   .container {
     text-align: center;
-    position: relative;
-    padding: 40px;
     z-index: 2;
+  }
+
+  h1 {
+    font-size: 2.2em;
+    color: #ff99aa;
+    text-shadow: 0 0 15px #ff3366;
+  }
+
+  .btn {
+    background: linear-gradient(45deg, #ff4d6d, #ff80ab);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+  .btn:hover {
+    background: linear-gradient(45deg, #e91e63, #ff4081);
+    transform: scale(1.05);
+  }
+
+  /* Surprise section */
+  .surprise {
+    display: none;
+    margin-top: 30px;
+    animation: fadeIn 1.5s forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   /* Cake */
@@ -57,7 +89,6 @@
     border-radius: 5px;
     position: absolute;
   }
-
   .flame {
     width: 10px;
     height: 20px;
@@ -68,82 +99,115 @@
     left: 2px;
     animation: flicker 0.8s infinite;
   }
-
   @keyframes flicker {
     0%, 100% { transform: scaleY(1) scaleX(1); opacity: 1; }
     50% { transform: scaleY(1.2) scaleX(0.9); opacity: 0.8; }
   }
-
-  /* Candle positions */
   .candle1 { left: -80px; top: 20px; }
   .candle2 { left: 260px; top: 20px; }
-  .candle3 { left: -50px; top: 150px; }
-  .candle4 { left: 230px; top: 150px; }
+
+  /* Flaming Heart */
+  .heart {
+    font-size: 100px;
+    color: red;
+    text-shadow: 0 0 20px orange, 0 0 40px yellow;
+    animation: beat 1s infinite;
+    margin-top: 20px;
+  }
+  @keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+  }
+
+  /* Crackers */
+  .spark {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: gold;
+    border-radius: 50%;
+    animation: spark 1.5s linear infinite;
+  }
+  @keyframes spark {
+    from { transform: scale(1) translateY(0); opacity: 1; }
+    to { transform: scale(0) translateY(-100px); opacity: 0; }
+  }
 
   /* Message */
   .message {
-    margin-top: 50px;
-    font-size: 20px;
+    margin-top: 20px;
+    font-size: 18px;
     font-style: italic;
     color: #ffd6e7;
     text-shadow: 0 0 10px #ff88a0;
+    line-height: 1.6;
   }
 
   .signature {
     margin-top: 15px;
-    font-size: 22px;
+    font-size: 20px;
     color: #ff99aa;
     font-weight: bold;
   }
 
-  /* Falling petals */
-  .petal {
-    position: fixed;
-    top: -10vh;
-    font-size: 28px;
-    color: #e91e63;
-    animation: fall linear infinite;
-    opacity: 0.9;
-    z-index: 1;
-  }
-
-  @keyframes fall {
-    0% { transform: translateY(0) rotate(0deg); }
-    100% { transform: translateY(110vh) rotate(360deg); }
+  /* Couple Image */
+  .couple {
+    margin-top: 30px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(255,100,150,0.5);
   }
 </style>
 </head>
 <body>
-  <!-- Falling petals layer -->
-  <div id="petals"></div>
+  <!-- Background Music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/04/04/audio_2ef9c1c7f0.mp3?filename=romantic-piano-14365.mp3" type="audio/mpeg">
+  </audio>
 
   <div class="container">
-    <div class="cake">
-      <!-- Candles -->
-      <div class="candle candle1"><div class="flame"></div></div>
-      <div class="candle candle2"><div class="flame"></div></div>
-      <div class="candle candle3"><div class="flame"></div></div>
-      <div class="candle candle4"><div class="flame"></div></div>
-    </div>
-    <div class="message">
-      Even after 4 months, my love for you only grows stronger.
-    </div>
-    <div class="signature">
-      Forever yours, Kundan ❤️ Gayuu
+    <h1>Happy 4 Months Anniversary Pilluu ❤️</h1>
+    <button class="btn" onclick="showSurprise()">Click Here for Surprise 💌</button>
+
+    <div class="surprise" id="surpriseSection">
+      <div class="cake">
+        <div class="candle candle1"><div class="flame"></div></div>
+        <div class="candle candle2"><div class="flame"></div></div>
+      </div>
+
+      <div class="heart">❤️</div>
+
+      <div class="message">
+        My sweetest Pilluu, <br><br>
+        In these four months, I have found not just love, but a world of happiness in you.  
+        Every heartbeat whispers your name, and every moment with you is a blessing.  
+        I promise to cherish you, support you, and love you endlessly. 💖  
+      </div>
+
+      <div class="signature">
+        Forever yours,<br>Kundan ❤️ Gayuu
+      </div>
+
+      <!-- Couple proposal image (replace link with yours if you want) -->
+      <img src="https://cdn.pixabay.com/photo/2020/02/14/14/14/couple-4842547_960_720.jpg" 
+           alt="Couple Proposal" class="couple">
     </div>
   </div>
 
 <script>
-  // Create falling petals
-  const petalsContainer = document.getElementById("petals");
-  for (let i = 0; i < 25; i++) {
-    let petal = document.createElement("div");
-    petal.className = "petal";
-    petal.innerHTML = "🌹";
-    petal.style.left = Math.random() * 100 + "vw";
-    petal.style.animationDuration = (5 + Math.random() * 5) + "s";
-    petal.style.animationDelay = Math.random() * 5 + "s";
-    petalsContainer.appendChild(petal);
+  function showSurprise() {
+    document.getElementById("surpriseSection").style.display = "block";
+
+    // Create cracker sparks
+    for (let i = 0; i < 50; i++) {
+      let spark = document.createElement("div");
+      spark.className = "spark";
+      spark.style.left = Math.random() * 100 + "vw";
+      spark.style.top = Math.random() * 100 + "vh";
+      spark.style.animationDuration = (1 + Math.random()) + "s";
+      document.body.appendChild(spark);
+      setTimeout(() => spark.remove(), 2000);
+    }
   }
 </script>
 </body>
