@@ -15,64 +15,83 @@
     align-items: center;
     overflow: hidden;
     color: #fff5f5;
+    text-align: center;
   }
-  .container { text-align: center; }
   h1 {
-    font-size: 2.2em;
+    font-size: 2.5em;
     color: #ff99aa;
-    text-shadow: 0 0 15px #ff3366;
+    text-shadow: 0 0 20px #ff3366;
+    margin-bottom: 15px;
+  }
+  h2 {
+    font-size: 1.5em;
+    color: #ffd6e7;
+    margin-bottom: 30px;
   }
   .btn {
     background: linear-gradient(45deg, #ff4d6d, #ff80ab);
     border: none;
     color: white;
-    padding: 15px 30px;
+    padding: 15px 35px;
     font-size: 1.2em;
-    border-radius: 30px;
+    border-radius: 35px;
     cursor: pointer;
     margin-top: 20px;
     transition: all 0.3s ease;
   }
-  .btn:hover { transform: scale(1.05); }
+  .btn:hover { transform: scale(1.08); }
   .surprise {
     display: none;
     margin-top: 30px;
     animation: fadeIn 1.5s forwards;
   }
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  /* Cake */
+  /* Heart Cake */
   .cake {
-    background: #e91e63;
-    width: 220px;
+    width: 200px;
     height: 180px;
-    border-radius: 50% 50% 40% 40%;
-    margin: 0 auto;
+    background: #e91e63;
     position: relative;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    margin: 0 auto;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(-45deg);
+    margin-top: 20px;
   }
-  .cake::before {
-    content: "Happy 4 Months Anniversary, My Pilluu";
+  .cake::before, .cake::after {
+    content: "";
     position: absolute;
-    top: 60px;
+    width: 200px;
+    height: 180px;
+    background: #e91e63;
+    border-radius: 50%;
+  }
+  .cake::before { top: -100px; left: 0; }
+  .cake::after { left: 100px; top: 0; }
+  .cakeText {
+    position: absolute;
+    top: 40%;
     left: 50%;
-    transform: translateX(-50%);
-    font-family: "Brush Script MT", cursive;
-    font-size: 20px;
+    transform: translate(-50%, -50%) rotate(45deg);
     color: #fffbe7;
+    font-size: 16px;
+    width: 160px;
     text-align: center;
-    width: 180px;
+    font-family: "Brush Script MT", cursive;
   }
   /* Candles */
   .candle {
-    width: 15px;
-    height: 50px;
+    width: 12px;
+    height: 45px;
     background: #fff5d6;
     border-radius: 5px;
     position: absolute;
+    top: -60px;
   }
+  .candle1 { left: 60px; }
+  .candle2 { left: 120px; }
   .flame {
     width: 10px;
     height: 20px;
@@ -80,46 +99,32 @@
     border-radius: 50%;
     position: absolute;
     top: -18px;
-    left: 2px;
+    left: 1px;
     animation: flicker 0.8s infinite;
   }
   @keyframes flicker {
     0%, 100% { transform: scaleY(1) scaleX(1); opacity: 1; }
-    50% { transform: scaleY(1.2) scaleX(0.9); opacity: 0.8; }
+    50% { transform: scaleY(1.2) scaleX(0.9); opacity: 0.7; }
   }
-  .candle1 { left: -80px; top: 20px; }
-  .candle2 { left: 260px; top: 20px; }
-  /* Heart */
-  .heart {
-    font-size: 100px;
-    color: red;
-    text-shadow: 0 0 20px orange, 0 0 40px yellow;
-    animation: beat 1s infinite;
-    margin-top: 20px;
-  }
-  @keyframes beat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.3); }
-  }
-  /* Crackers */
+  /* Heart Cracker Sparks */
   .spark {
     position: fixed;
-    width: 8px;
-    height: 8px;
-    background: gold;
+    width: 10px;
+    height: 10px;
+    background: pink;
     border-radius: 50%;
-    animation: spark 1.5s linear infinite;
+    animation: spark 1.5s linear forwards;
   }
   @keyframes spark {
     from { transform: scale(1) translateY(0); opacity: 1; }
-    to { transform: scale(0) translateY(-100px); opacity: 0; }
+    to { transform: scale(0) translateY(-150px); opacity: 0; }
   }
-  /* Message */
-  .message {
-    margin-top: 20px;
+  /* Speech */
+  .speech {
+    margin-top: 30px;
     font-size: 18px;
-    font-style: italic;
     color: #ffd6e7;
+    font-style: italic;
     text-shadow: 0 0 10px #ff88a0;
     line-height: 1.6;
   }
@@ -132,21 +137,26 @@
   <source src="https://files.catbox.moe/v8s9ez.mp3" type="audio/mpeg">
 </audio>
 
-<div class="container">
-  <h1>Happy 4 Months Anniversary Pilluu ❤️</h1>
-  <button class="btn" onclick="showSurprise()">Click Here for Surprise 💌</button>
+<div>
+  <h1>Kundan Loves Gayuu Forever ❤️</h1>
+  <h2>Happy Four Month Anniversary Pilluu</h2>
+  <button class="btn" onclick="showSurprise()">My Soul For You 💌</button>
 
   <div class="surprise" id="surpriseSection">
     <div class="cake">
       <div class="candle candle1"><div class="flame"></div></div>
       <div class="candle candle2"><div class="flame"></div></div>
+      <div class="cakeText">Happy 4 Months Anniversary</div>
     </div>
-    <div class="heart">❤️</div>
-    <div class="message">
-      My dearest Pilluu,<br><br>
-      These four months have been the most beautiful journey of my life.  
-      You are my heart, my happiness, and my forever.  
-      I promise to hold your hand through every moment and love you endlessly. 💖  
+    <div class="speech">
+      My beloved Pilluu,<br><br>
+      These four months with you have been a dream come true.  
+      Every smile of yours brightens my soul, every word from you heals my heart.  
+      You are my forever, my strength, and my most beautiful blessing.  
+      I vow to cherish you endlessly, love you deeply, and stand by your side in every moment.  
+      <br><br>
+      Forever yours, <br>
+      ❤️ Kundan
     </div>
   </div>
 </div>
@@ -154,12 +164,13 @@
 <script>
   function showSurprise() {
     document.getElementById("surpriseSection").style.display = "block";
-    // Sparkling crackers
-    for (let i = 0; i < 50; i++) {
+    // Create heart-shaped cracker sparks
+    for (let i = 0; i < 60; i++) {
       let spark = document.createElement("div");
       spark.className = "spark";
       spark.style.left = Math.random() * 100 + "vw";
       spark.style.top = Math.random() * 100 + "vh";
+      spark.style.background = Math.random() > 0.5 ? "red" : "pink";
       spark.style.animationDuration = (1 + Math.random()) + "s";
       document.body.appendChild(spark);
       setTimeout(() => spark.remove(), 2000);
