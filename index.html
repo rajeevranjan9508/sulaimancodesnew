@@ -1,151 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Happy 4 Months, Pilluu ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 4th Month Anniversary, Pilluu ❤️</title>
 <style>
-  :root{
-    --bg1: #fff0f6;
-    --bg2: #fff8ee;
-    --accent: #ff4d6d;
-    --gold: #ffd66b;
-    --rose: #e94b6b;
-  }
-  html,body{height:100%;margin:0;font-family: "Segoe UI", Roboto, system-ui, -apple-system, "Noto Sans", "Helvetica Neue", Arial;}
-  body{
-    background: radial-gradient(circle at 10% 10%, #fff3f7 0%, transparent 30%),
-                radial-gradient(circle at 90% 90%, #fffaf0 0%, transparent 30%),
-                linear-gradient(120deg,var(--bg1),var(--bg2));
-    display:flex;align-items:center;justify-content:center; padding:24px;
-  }
-  .card{
-    width:100%; max-width:860px; background:rgba(255,255,255,0.8);
-    border-radius:22px; box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-    padding:28px; text-align:center; position:relative; overflow:hidden;
-  }
-  .lights{position:absolute;left:0;right:0;top:0;height:120px;pointer-events:none;}
-  .lights i{display:inline-block;width:8px;height:8px;margin:0 6px;border-radius:50%;background:var(--gold);opacity:0.95; transform-origin:center; animation:twinkle 2s infinite;}
-  @keyframes twinkle{0%,100%{transform:scale(0.8);opacity:0.6}50%{transform:scale(1.4);opacity:1}}
-
-  h1{margin:12px 0 0;font-size:28px;color:var(--rose)}
-  p.lead{color:#5a3a46;margin:8px 0 18px}
-  .cake {
-    margin:18px auto 14px; width:320px; height:260px; position:relative;
-    perspective:900px;
-  }
-  .cake .layer{
-    position:absolute; left:50%; transform:translateX(-50%);
-    width:84%; height:30%; border-radius:16px; background:linear-gradient(180deg,#fff 0%,#ffeef3 100%);
-    box-shadow:0 8px 18px rgba(0,0,0,0.08);
-  }
-  .cake .layer.top{top:8%; height:40%; background:linear-gradient(180deg,#fff 0%, #ffdfe9 100%);}
-  .cake .layer.mid{top:42%;}
-  .cake .frost{
-    position:absolute; left:50%; transform:translateX(-50%); top:34%; width:86%; height:18px; border-radius:10px;
-    background:linear-gradient(90deg,#ff9fb1,#ffd2a6); box-shadow: inset 0 2px 4px rgba(255,255,255,0.6);
-  }
-  .rose{
-    position:absolute; right:12%; top:6%; width:44px; height:44px; border-radius:50%;
-    background:radial-gradient(circle at 35% 30%,#ff8093,#e23a5d);
-    box-shadow:0 4px 10px rgba(0,0,0,0.12);
-  }
-  .text-plate{
-    margin-top:170px; font-weight:600; color:#7a3b44; font-size:18px;
+  body {
+    margin: 0;
+    font-family: "Georgia", serif;
+    background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
   }
 
-  .btn{
-    display:inline-block;margin-top:18px;padding:12px 22px;border-radius:999px;
-    background:linear-gradient(90deg,var(--accent),#ff7aa3); color:white; text-decoration:none; font-weight:700;
-    box-shadow:0 8px 18px rgba(255,77,109,0.18); cursor:pointer; border: none;
+  /* Falling petals */
+  .petal {
+    position: fixed;
+    top: -10vh;
+    font-size: 28px;
+    color: #e91e63;
+    animation: fall linear infinite;
+    opacity: 0.9;
   }
 
-  .secret{
-    margin-top:18px; padding:18px; border-radius:14px; background:linear-gradient(180deg,#fff6f8,#fff1f4);
-    box-shadow:0 6px 18px rgba(0,0,0,0.06); display:none; text-align:center;
-  }
-  .secret p{margin:6px 0;color:#5b2b36}
-  .confetti{
-    pointer-events:none; position:absolute; inset:0; overflow:hidden;
-  }
-  .confetti i{
-    position:absolute; width:10px; height:16px; opacity:0.95; transform:rotate(15deg);
-    animation:fall linear infinite;
-  }
-  @keyframes fall{
-    0%{transform:translateY(-10%) rotate(0deg); opacity:1}
-    100%{transform:translateY(110vh) rotate(720deg); opacity:0.95}
+  @keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(110vh) rotate(360deg); }
   }
 
-  footer{font-size:12px;color:#a96b76;margin-top:12px}
-  @media (max-width:520px){
-    .cake{width:260px;height:200px}
-    h1{font-size:22px}
-    .text-plate{font-size:16px}
+  .container {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 {
+    font-size: 2.2em;
+    color: #c2185b;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 1.3em;
+    color: #7b1fa2;
+    margin-bottom: 20px;
+  }
+
+  .heart {
+    font-size: 70px;
+    color: red;
+    animation: beat 1s infinite;
+    margin: 20px 0;
+  }
+
+  @keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+  }
+
+  .btn {
+    background: linear-gradient(45deg, #ff4d6d, #ff80ab);
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1em;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background: linear-gradient(45deg, #e91e63, #ff4081);
+    transform: scale(1.05);
+  }
+
+  .message {
+    margin-top: 25px;
+    padding: 20px;
+    background: #fff0f5;
+    border-radius: 15px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #444;
+    display: none;
+    animation: fadeIn 1.5s forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .signature {
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 1.2em;
+    color: #c2185b;
+  }
+
+  .roses {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    font-size: 30px;
+    opacity: 0.8;
   }
 </style>
 </head>
 <body>
-  <div class="card" role="main" aria-labelledby="title">
-    <div class="lights" aria-hidden="true">
-      <!-- decorative lights -->
-      <i style="animation-delay:0s"></i><i style="animation-delay:.2s"></i><i style="animation-delay:.4s"></i><i style="animation-delay:.6s"></i>
-      <i style="animation-delay:.8s"></i><i style="animation-delay:1s"></i><i style="animation-delay:1.2s"></i><i style="animation-delay:1.4s"></i>
+  <!-- Falling petals layer -->
+  <div id="petals"></div>
+
+  <!-- Background music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/04/04/audio_2ef9c1c7f0.mp3?filename=romantic-piano-14365.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="container">
+    <h1>Happy 4th Month Anniversary ❤️</h1>
+    <h2>To My Sweet Pilluu</h2>
+    <div class="heart">❤️</div>
+
+    <button class="btn" onclick="showMessage()">Click to Reveal Surprise 💌</button>
+
+    <div class="message" id="hiddenMessage">
+      Four months may seem small, but to me, it means the world. <br><br>
+      Every single day with you has been a blessing, a memory, and a promise of forever.  
+      You are my joy, my peace, and my endless love. 💕 <br><br>
+      <div class="signature">
+        Forever yours,<br>
+        Kundan ❤️ Gayuu
+      </div>
     </div>
 
-    <h1 id="title">Happy 4 Months, Pilluu ❤️</h1>
-    <p class="lead">A little surprise — open it for your message and cake 💌</p>
-
-    <div class="cake" aria-hidden="true">
-      <div class="layer top" style="transform:translateX(-50%) translateZ(30px)"></div>
-      <div class="frost"></div>
-      <div class="layer mid"></div>
-      <div class="rose" aria-hidden="true" title="rose"></div>
-      <div class="text-plate" aria-hidden="true">🎂 Heart-shaped special cake</div>
-    </div>
-
-    <button class="btn" id="openBtn">Open Your Gift</button>
-
-    <div class="secret" id="secret">
-      <h2 style="margin:0;color:#c83a59">Surprise, my Pilluu!</h2>
-      <p style="font-size:16px;font-weight:600;margin-top:8px">Even after 4 months, my love for you only grows stronger.</p>
-      <p style="margin-top:6px">Forever yours, <strong>Kundan ❤️ Gayuu</strong></p>
-      <p style="margin-top:10px;font-size:13px;color:#a65b6b">Happy 4-month anniversary 💕</p>
-    </div>
-
-    <div class="confetti" id="confetti" aria-hidden="true"></div>
-
-    <footer>Tip: Save this file and send the link or the file. ✨</footer>
+    <div class="roses">🌹 🌹 🌹 🌹 🌹</div>
   </div>
 
 <script>
-  const openBtn = document.getElementById('openBtn');
-  const secret = document.getElementById('secret');
-  const confetti = document.getElementById('confetti');
-
-  function spawnConfetti(){
-    const colors = ['#ff7aa3','#ffd36b','#ffb3c6','#ffd2a6','#ff9fb1'];
-    for(let i=0;i<28;i++){
-      const el = document.createElement('i');
-      const left = Math.random()*100;
-      el.style.left = left + 'vw';
-      el.style.top = (-10 - Math.random()*10) + 'vh';
-      el.style.background = colors[Math.floor(Math.random()*colors.length)];
-      el.style.width = (6 + Math.random()*10) + 'px';
-      el.style.height = (10 + Math.random()*18) + 'px';
-      el.style.animationDuration = (3 + Math.random()*4) + 's';
-      el.style.animationDelay = (Math.random()*0.6) + 's';
-      confetti.appendChild(el);
-    }
+  function showMessage() {
+    document.getElementById("hiddenMessage").style.display = "block";
   }
 
-  openBtn.addEventListener('click', ()=>{
-    secret.style.display = 'block';
-    openBtn.style.display = 'none';
-    spawnConfetti();
-    // subtle pulse on secret
-    secret.animate([{transform:'scale(.98)'},{transform:'scale(1)'}],{duration:700,iterations:1})
-  });
+  // Create falling petals
+  const petalsContainer = document.getElementById("petals");
+  for (let i = 0; i < 25; i++) {
+    let petal = document.createElement("div");
+    petal.className = "petal";
+    petal.innerHTML = "🌹";
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.animationDuration = (5 + Math.random() * 5) + "s";
+    petal.style.animationDelay = Math.random() * 5 + "s";
+    petalsContainer.appendChild(petal);
+  }
 </script>
 </body>
 </html>
