@@ -1,262 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Happy Birthday Website 2.0 | Aoudumber Bade">
-    <meta name="github" content="https://github.com/Aoudumber-Bade">
-    <title>Gayatri Birthday</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@400;600&display=swap"
-        rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Happy 4 Months, Pilluu ❤️</title>
+<style>
+  :root{
+    --bg1: #fff0f6;
+    --bg2: #fff8ee;
+    --accent: #ff4d6d;
+    --gold: #ffd66b;
+    --rose: #e94b6b;
+  }
+  html,body{height:100%;margin:0;font-family: "Segoe UI", Roboto, system-ui, -apple-system, "Noto Sans", "Helvetica Neue", Arial;}
+  body{
+    background: radial-gradient(circle at 10% 10%, #fff3f7 0%, transparent 30%),
+                radial-gradient(circle at 90% 90%, #fffaf0 0%, transparent 30%),
+                linear-gradient(120deg,var(--bg1),var(--bg2));
+    display:flex;align-items:center;justify-content:center; padding:24px;
+  }
+  .card{
+    width:100%; max-width:860px; background:rgba(255,255,255,0.8);
+    border-radius:22px; box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    padding:28px; text-align:center; position:relative; overflow:hidden;
+  }
+  .lights{position:absolute;left:0;right:0;top:0;height:120px;pointer-events:none;}
+  .lights i{display:inline-block;width:8px;height:8px;margin:0 6px;border-radius:50%;background:var(--gold);opacity:0.95; transform-origin:center; animation:twinkle 2s infinite;}
+  @keyframes twinkle{0%,100%{transform:scale(0.8);opacity:0.6}50%{transform:scale(1.4);opacity:1}}
+
+  h1{margin:12px 0 0;font-size:28px;color:var(--rose)}
+  p.lead{color:#5a3a46;margin:8px 0 18px}
+  .cake {
+    margin:18px auto 14px; width:320px; height:260px; position:relative;
+    perspective:900px;
+  }
+  .cake .layer{
+    position:absolute; left:50%; transform:translateX(-50%);
+    width:84%; height:30%; border-radius:16px; background:linear-gradient(180deg,#fff 0%,#ffeef3 100%);
+    box-shadow:0 8px 18px rgba(0,0,0,0.08);
+  }
+  .cake .layer.top{top:8%; height:40%; background:linear-gradient(180deg,#fff 0%, #ffdfe9 100%);}
+  .cake .layer.mid{top:42%;}
+  .cake .frost{
+    position:absolute; left:50%; transform:translateX(-50%); top:34%; width:86%; height:18px; border-radius:10px;
+    background:linear-gradient(90deg,#ff9fb1,#ffd2a6); box-shadow: inset 0 2px 4px rgba(255,255,255,0.6);
+  }
+  .rose{
+    position:absolute; right:12%; top:6%; width:44px; height:44px; border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#ff8093,#e23a5d);
+    box-shadow:0 4px 10px rgba(0,0,0,0.12);
+  }
+  .text-plate{
+    margin-top:170px; font-weight:600; color:#7a3b44; font-size:18px;
+  }
+
+  .btn{
+    display:inline-block;margin-top:18px;padding:12px 22px;border-radius:999px;
+    background:linear-gradient(90deg,var(--accent),#ff7aa3); color:white; text-decoration:none; font-weight:700;
+    box-shadow:0 8px 18px rgba(255,77,109,0.18); cursor:pointer; border: none;
+  }
+
+  .secret{
+    margin-top:18px; padding:18px; border-radius:14px; background:linear-gradient(180deg,#fff6f8,#fff1f4);
+    box-shadow:0 6px 18px rgba(0,0,0,0.06); display:none; text-align:center;
+  }
+  .secret p{margin:6px 0;color:#5b2b36}
+  .confetti{
+    pointer-events:none; position:absolute; inset:0; overflow:hidden;
+  }
+  .confetti i{
+    position:absolute; width:10px; height:16px; opacity:0.95; transform:rotate(15deg);
+    animation:fall linear infinite;
+  }
+  @keyframes fall{
+    0%{transform:translateY(-10%) rotate(0deg); opacity:1}
+    100%{transform:translateY(110vh) rotate(720deg); opacity:0.95}
+  }
+
+  footer{font-size:12px;color:#a96b76;margin-top:12px}
+  @media (max-width:520px){
+    .cake{width:260px;height:200px}
+    h1{font-size:22px}
+    .text-plate{font-size:16px}
+  }
+</style>
 </head>
-
 <body>
-    <div id="wrapper">
-        <div class="flag__birthday">
-            <img src="./images/1.png" alt="" width="350" class="flag__left">
-            <img src="./images/1.png" alt="" width="350" class="flag__right">
-        </div>
-        <div class="content">
-            <div class="left">
-                <div class="title">
-                    <h1 class="happy">
-                        <span style="--t: 4s;">H</span>
-                        <span style="--t: 4.2s;">a</span>
-                        <span style="--t: 4.4s;">p</span>
-                        <span style="--t: 4.6s;">p</span>
-                        <span style="--t: 4.8s;">y</span>
-                    </h1>
-                    <h1 class="birthday">
-                        <span style="--t: 5s;">B</span>
-                        <span style="--t: 5.2s;">i</span>
-                        <span style="--t: 5.4s;">r</span>
-                        <span style="--t: 5.6s;">t</span>
-                        <span style="--t: 5.8s;">h</span>
-                        <span style="--t: 6s;">d</span>
-                        <span style="--t: 6.2s;">a</span>
-                        <span style="--t: 6.4s;">y</span>
-                    </h1>
-                    <div class="hat">
-                        <img src="./images/hat.png" alt="" width="130">
-                    </div>
-                </div>
-                <div class="date__of__birth">
-                    <span></span>
-                </div>
-                <div class="btn">
-                    <button id="btn__letter">
-                        <div class="mail">
-                            Click Here Gayatri
-                            <i class="fa-regular fa-envelope"></i>
-                        </div>
-                    </button>
-
-                </div>
-            </div>
-            <div class="right">
-                <div class="box__account">
-                    <div class="image">
-                        <img src="./images/unnamed.png" alt="">
-                    </div>
-                    <div class="name">
-                        <i class="fa-solid fa-heart"></i>
-                        <span>Dear Gayatri</span>
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-                    <div class="balloon_one">
-                        <img width="100px" src="./images/balloon1.png" alt="">
-                    </div>
-                    <div class="balloon_two">
-                        <img width="100px" src="./images/balloon2.png" alt="">
-                    </div>
-                </div>
-                <div class="cricle">
-                    <div class="text__cricle">
-                        <span style="--i: 1;">h</span>
-                        <span style="--i: 2;">a</span>
-                        <span style="--i: 3;">p</span>
-                        <span style="--i: 4;">p</span>
-                        <span style="--i: 5;">y</span>
-                        <span style="--i: 6;">-</span>
-                        <span style="--i: 7;">b</span>
-                        <span style="--i: 8;">i</span>
-                        <span style="--i: 9;">r</span>
-                        <span style="--i: 10;">t</span>
-                        <span style="--i: 11;">h</span>
-                        <span style="--i: 12;">d</span>
-                        <span style="--i: 13;">a</span>
-                        <span style="--i: 14;">y</span>
-                        <span style="--i: 15;">-</span>
-                    </div>
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-            </div>
-        </div>
-        <div class="decorate_star star1" style="--t: 15s;"></div>
-        <div class="decorate_star star2" style="--t: 15.2s;"></div>
-        <div class="decorate_star star3" style="--t: 15.4s;"></div>
-        <div class="decorate_star star4" style="--t: 15.6s;"></div>
-        <div class="decorate_star star5" style="--t: 15.8s;"></div>
-        <div class="decorate_flower--one" style="--t: 15s;">
-            <img width="20" src="./images/decorate_flower.png" alt="">
-        </div>
-        <div class="decorate_flower--two" style="--t: 15.3s;">
-            <img width="20" src="./images/decorate_flower.png" alt="">
-        </div>
-        <div class="decorate_flower--three" style="--t: 15.6s;">
-            <img width="20" src="./images/decorate_flower.png" alt="">
-        </div>
-        <div class="decorate_bottom">
-            <img src="./images/decorate.png" alt="" width="100">
-        </div>
-        <div class="smiley__icon">
-            <img src="./images/smiley_icon.png" alt="" width="100">
-        </div>
-
-
-        <div class="boxMail">
-            <i class="fa-solid fa-xmark"></i>
-            <div class="boxMail-container">
-                <div class="card1">
-                    <div class="userImg">
-                        <img src="images/unnamed.png" alt="">
-                    </div>
-                    <h4 class="username">To: Gayatri💖<span class="underline"></span></h4>
-
-                    <h3>Happy Birthday</h3>
-                    <div class="imageCute">
-                        <img src="cute1.png" alt="">
-                    </div>
-                </div>
-                <div class="card2">
-                    <div class="card2-content">
-                        <h3>To You!</h3>
-                        <h2>Happy birthday 🥳🎂🥳 Gayatri the day you come into my life I was not really much attached to
-                            you but day by day you became close to my heart . And now you are truly my love. I
-                            wish I could remove some of the pain from your life which you are bearing alone. But you're
-                            always welcome 🤗 you can talk anytime you want to talk specially those which you can't say
-                            to others. And this year your all dreams come true . I am wishing you happy birthday
-                            🎈🎂🎈 Gayatri . Don't be Sad ok be happy 😌
-                        </h2>
-
-                        <div class="imageCute2">
-                            <img src="cute2.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="card" role="main" aria-labelledby="title">
+    <div class="lights" aria-hidden="true">
+      <!-- decorative lights -->
+      <i style="animation-delay:0s"></i><i style="animation-delay:.2s"></i><i style="animation-delay:.4s"></i><i style="animation-delay:.6s"></i>
+      <i style="animation-delay:.8s"></i><i style="animation-delay:1s"></i><i style="animation-delay:1.2s"></i><i style="animation-delay:1.4s"></i>
     </div>
 
-</body>
+    <h1 id="title">Happy 4 Months, Pilluu ❤️</h1>
+    <p class="lead">A little surprise — open it for your message and cake 💌</p>
+
+    <div class="cake" aria-hidden="true">
+      <div class="layer top" style="transform:translateX(-50%) translateZ(30px)"></div>
+      <div class="frost"></div>
+      <div class="layer mid"></div>
+      <div class="rose" aria-hidden="true" title="rose"></div>
+      <div class="text-plate" aria-hidden="true">🎂 Heart-shaped special cake</div>
+    </div>
+
+    <button class="btn" id="openBtn">Open Your Gift</button>
+
+    <div class="secret" id="secret">
+      <h2 style="margin:0;color:#c83a59">Surprise, my Pilluu!</h2>
+      <p style="font-size:16px;font-weight:600;margin-top:8px">Even after 4 months, my love for you only grows stronger.</p>
+      <p style="margin-top:6px">Forever yours, <strong>Kundan ❤️ Gayuu</strong></p>
+      <p style="margin-top:10px;font-size:13px;color:#a65b6b">Happy 4-month anniversary 💕</p>
+    </div>
+
+    <div class="confetti" id="confetti" aria-hidden="true"></div>
+
+    <footer>Tip: Save this file and send the link or the file. ✨</footer>
+  </div>
+
 <script>
-    let datetxt = "20 July";
-    let datatxtletter = "My love. You are a very special girl. I always silently thank you for coming into my life. Today, I wish you all the best, lots of health, and lots of joy. I always hope we will celebrate many more birthdays like this together. Happy birthday to you.💕";
-    let titleLetter = "To you";
-    let charArrDate = datetxt.split('');
-    let charArrDateLetter = datatxtletter.split('');
-    let charArrTitle = titleLetter.split('');
-    let currentIndex = 0;
-    let currentIndexLetter = 0;
-    let currentIndexTitle = 0;
-    let date__of__birth = document.querySelector(".date__of__birth span");
-    let text__letter = document.querySelector(".text__letter p");
-    setTimeout(function () {
-        timeDatetxt = setInterval(function () {
-            if (currentIndex < charArrDate.length) {
-                date__of__birth.textContent += charArrDate[currentIndex];
-                currentIndex++;
-            }
-            else {
-                let i = document.createElement("i");
-                i.className = "fa-solid fa-star"
-                document.querySelector(".date__of__birth").prepend(i)
-                document.querySelector(".date__of__birth").appendChild(i.cloneNode(true))
-                clearInterval(timeDatetxt)
-            }
-        }, 100)
-    }, 12000)
+  const openBtn = document.getElementById('openBtn');
+  const secret = document.getElementById('secret');
+  const confetti = document.getElementById('confetti');
 
-    var intervalContent;
-    var intervalTitle;
-    $("#btn__letter").on("click", function () {
-        $(".box__letter").slideDown()
-        setTimeout(function () {
-            $(".letter__border").slideDown();
-        }, 1000)
-        setTimeout(function () {
-            intervalTitle = setInterval(function () {
-                if (currentIndexTitle < charArrTitle.length) {
-                    document.querySelector(".title__letter").textContent += charArrTitle[currentIndexTitle];
-                    let i = document.createElement("i");
-                    i.className = "fa-solid fa-heart"
-                    document.querySelector(".title__letter").appendChild(i)
-                    currentIndexTitle++;
-                }
-                else {
-                    clearInterval(intervalTitle)
-                }
-            }, 100)
-        }, 2000)
-        setTimeout(function () {
-            document.querySelector("#heart__letter").classList.add("animationOp");
-            document.querySelector(".love__img").classList.add("animationOp");
-            document.querySelector("#mewmew").classList.add("animationOp");
-        }, 2800)
-        setTimeout(function () {
-            document.querySelectorAll(".heart").forEach((item) => {
-                item.classList.add("animation")
-            })
-        }, 3500)
-        setTimeout(function () {
-            intervalContent = setInterval(function () {
-                if (currentIndexLetter < charArrDateLetter.length) {
-                    text__letter.textContent += charArrDateLetter[currentIndexLetter];
-                    currentIndexLetter++;
-                }
-                else {
-                    clearInterval(intervalContent)
-                }
-            }, 50)
-        }, 6000)
-    })
-    $(".close").on("click", function () {
-        clearInterval(intervalContent)
-        document.querySelector(".title__letter").textContent = "";
-        text__letter.textContent = "";
-        currentIndexLetter = 0
-        currentIndexTitle = 0
-        document.querySelector("#heart__letter").classList.remove("animationOp");
-        document.querySelector(".love__img").classList.remove("animationOp");
-        document.querySelector("#mewmew").classList.remove("animationOp");
-        document.querySelectorAll(".heart").forEach((item) => {
-            item.classList.remove("animation")
-        })
-        $(".box__letter").slideUp();
-        $(".letter__border").slideUp();
-    })
-
-
-
-    let mailBox = document.querySelector('.mail')
-    let boxmail = document.querySelector('.boxMail')
-    var close = document.querySelector('.fa-xmark')
-    mailBox.onclick = function () {
-        mailBox.classList.toggle('active')
-        boxmail.classList.add('active')
+  function spawnConfetti(){
+    const colors = ['#ff7aa3','#ffd36b','#ffb3c6','#ffd2a6','#ff9fb1'];
+    for(let i=0;i<28;i++){
+      const el = document.createElement('i');
+      const left = Math.random()*100;
+      el.style.left = left + 'vw';
+      el.style.top = (-10 - Math.random()*10) + 'vh';
+      el.style.background = colors[Math.floor(Math.random()*colors.length)];
+      el.style.width = (6 + Math.random()*10) + 'px';
+      el.style.height = (10 + Math.random()*18) + 'px';
+      el.style.animationDuration = (3 + Math.random()*4) + 's';
+      el.style.animationDelay = (Math.random()*0.6) + 's';
+      confetti.appendChild(el);
     }
+  }
 
-    close.addEventListener('click', function () {
-        boxmail.classList.remove('active')
-    })
+  openBtn.addEventListener('click', ()=>{
+    secret.style.display = 'block';
+    openBtn.style.display = 'none';
+    spawnConfetti();
+    // subtle pulse on secret
+    secret.animate([{transform:'scale(.98)'},{transform:'scale(1)'}],{duration:700,iterations:1})
+  });
 </script>
-
+</body>
 </html>
