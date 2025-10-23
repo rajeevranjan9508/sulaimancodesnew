@@ -1,7 +1,4 @@
-
-    # Aqua - My Birthday Website 🎂
-
-    Hello! This is birthday website. added new text and CSS for better look.
+hello..  This is birthday website. added new text and CSS for better look.
 
     ## What's New:
     - Updated index.html with birthday messages
@@ -18,5 +15,3 @@
   
 
     Made by Sualimancse. 😊
-    ```
-  
