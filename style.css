@@ -73,7 +73,7 @@ body {
 }
 .left .btn{
     transform: scale(0);
-    animation: scaleCricle 2s 16s forwards ease-in-out;
+    animation: scaleCricle 2s 4s forwards ease-in-out;
 }
 #btn__letter{
     position: relative;
@@ -148,7 +148,7 @@ body {
     transform: translateY(50px);
     opacity: 0;
     visibility: hidden;
-    animation: txtTranslateY .5s var(--t) forwards;
+    animation: txtTranslateY .3s var(--t) forwards;
 }
 @keyframes txtTranslateY{
     100%{
@@ -167,7 +167,7 @@ body {
     top: -350px;
     transform: rotate(-40deg);
     z-index: -1;
-    animation: topHat 4s 7s forwards ease;
+    animation: topHat 6s 3s forwards ease;
 }
 @keyframes topHat{
     20%, 30%{
@@ -198,7 +198,7 @@ body {
     opacity: 0;
     visibility: hidden;
     width: 0px;
-    animation: dateOfBirth 5s 9s forwards;
+    animation: dateOfBirth 2s 3s forwards;
 }
 @keyframes dateOfBirth{
     20%,40%{
@@ -243,7 +243,7 @@ body {
 .right .box__account{
     position: relative;
     transform: translateY(700px);
-    animation: topBoxImage 8s 7s forwards ease-in;
+    animation: topBoxImage 3s forwards ease-in;
 }
 @keyframes topBoxImage{
     to{
@@ -334,7 +334,7 @@ body {
 .right .balloon_one{
     position: absolute;
     top: -70px;
-    left: -70px;
+    left: -200px;
     animation: balloon1 2s infinite linear;
 }
 @keyframes balloon1{
@@ -451,7 +451,7 @@ body {
     bottom: 180px;
     left: 600px;
     transform: scale(0);
-    animation: scaleCricle 3s 15s forwards ease-in-out;
+    animation: scaleCricle 3s 4s forwards ease-in-out;
 }
 
 
@@ -780,7 +780,7 @@ body {
     }
 
     .name span {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
     .right .balloon_one {
